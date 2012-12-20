@@ -1,0 +1,7 @@
+pyramid_pony.egg-info
+*.egg
+*.pyc
+build/
+dist/
+docs/_build
+docs/_themes
