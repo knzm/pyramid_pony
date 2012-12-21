@@ -7,7 +7,7 @@ from pyramid.decorator import reify
 from .pony import PONY, UNICORN, TEMPLATE
 
 
-class RootContext(object):
+class PonyContext(object):
     def __init__(self, request):
         self.request = request
         if request.params.get("horn"):
@@ -40,5 +40,5 @@ def view(request):
 
 
 def includeme(config):
-    config.add_route("pony", "/pony", factory=RootContext)
+    config.add_route("pony", "/pony", factory=PonyContext)
     config.add_view(view, route_name='pony')
